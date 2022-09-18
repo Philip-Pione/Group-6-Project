@@ -23,7 +23,7 @@
                 <label for="formGroupTaskDescription">Task description</label>
                 <input type="text" class="form-control" id="formGroupTaskDescription" placeholder="Describe it...">
             </div>
-            <div class="row">
+            <div class="form-row">
                 <div class="col">
                     <div class="form-group">
                         <label for="formGroupAssignedTo">Assigned to</label>
@@ -37,9 +37,22 @@
                     </div>
                 </div>
             </div>
-           
-            <div class="row justify-content-center mt-1">
-            <button type="button" class="btn btn-outline-secondary active" aria-pressed="true">Submit</button>
+            <div class="form-row mt-1 align-items-center">
+                <div class="form-group col-5">
+                    <label for="formTaskStatus">Task Status</label>
+                    <select id="formTaskStatus" class="form-control">
+                      <option selected>To Do</option>
+                      <option>In Progress</option>
+                      <option>Review</option>
+                      <option>Done</option>
+                    </select>
+                </div>
+                <div class="col-3">
+
+                </div>
+                <div class="form-group col-1"> 
+                    <button type="submit" class="btn-lg btn-outline-secondary active mt-4" aria-pressed="true">Submit</button>
+                </div> 
             </div>
 
             <footer>
