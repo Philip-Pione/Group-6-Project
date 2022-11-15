@@ -9,7 +9,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
         <p>Due Date: ${dueDate}</p>
         <button type="button" class="btn btn-success btn-sm">${status}</button>
         <a href="#" class="btn done-button btn-secondary">Mark As Done</a>
-        <a href="#" class="btn btn-primary">Delete</a>
+        <a href="#" class="btn btn-primary delete-button">Delete</a>
       </div>
     </div>  
   </li>`
@@ -39,10 +39,9 @@ class TaskManager {
     const taskHtmlList = [];
 
     for (let i = 0; i < taskManager.tasks.length; i++) {
-      console.log(taskManager.tasks.length);
       const workingTask = taskManager.tasks[i];
       const date = new Date(`${workingTask.dueDate}T00:00`);
-      const formattedDate = date.toString().substring(0,15);
+      const formattedDate = date.toString().substring(0, 15);
       const taskHtml = createTaskHtml(workingTask.id, workingTask.name, workingTask.description, workingTask.assignedTo, formattedDate, workingTask.status);
       taskHtmlList.push(taskHtml);
     }
@@ -60,4 +59,32 @@ class TaskManager {
     }
     return foundTask;
   }
+
+  save() {
+    const tasksJson = JSON.stringify(this.tasks);
+    localStorage.setItem('tasks', tasksJson);
+    const currentId = JSON.stringify(this.currentId);
+    localStorage.setItem('currentId', currentId);
+  }
+
+  load() {
+    if (localStorage.getItem('tasks')) {
+      const tasksJson = JSON.parse(localStorage.getItem('tasks'));
+      this.tasks = tasksJson;
+      const currentId = JSON.parse(localStorage.getItem('currentId'));
+      this.currentId = parseInt(currentId);
+    }
+  }
+
+  deleteTask(taskId) {
+    const newTasks = [];
+    for (let i = 0; i < taskManager.tasks.length; i++) {
+      const task = taskManager.tasks[i];
+      if (task.id != taskId) {
+        newTasks.push(task);
+      }
+    }
+    this.tasks = newTasks;
+  }
+
 }
