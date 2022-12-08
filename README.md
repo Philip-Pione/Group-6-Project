@@ -14,4 +14,4 @@ Please feel free to contact me with any questions via email or LinkedIn.
 <br>
 Role: Sole author
 <br>
-Tools used: Bootstrap, CSS, HTML, Javascript, Flexbox, Local storage.
+Tools used: Bootstrap, CSS, HTML, Javascript, Flexbox, GitHub, GitBash, Local storage.
