@@ -10,5 +10,8 @@ Please feel free to contact me with any questions via email or LinkedIn.
 
 [CODE] - https://github.com/Philip-Pione/Group-6-Project
 [LIVE] - https://philip-pione.github.io/Group-6-Project/
+
+<br>
 Role: Sole author
+<br>
 Tools used: Bootstrap, CSS, HTML, Javascript, Flexbox, Local storage.
