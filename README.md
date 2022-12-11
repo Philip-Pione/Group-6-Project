@@ -29,7 +29,7 @@ Tools used: Bootstrap, CSS, HTML, Javascript, Flexbox, GitHub, GitBash, Local st
 
 This is a website to allow users to create and update their todo task cards. The user is able to set the status of their task card, and once they are finish their card, they can delete it and remove the card freely from their dashboard
 
-<img width="800" src="https://philip-pione.github.io/Portfolio/assets/images/Thumbnail.JPG">
+<img width="400" src="https://philip-pione.github.io/Portfolio/assets/images/Thumbnail.JPG">
 
 ## Technologies
 
