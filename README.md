@@ -1,4 +1,4 @@
-#Task Organizer created by Group 6
+# Task Organizer
 
 ## Description
 An interactive tool that allows users to create a list of tasks that need to be done. This app allows the user to organize their tasks and track them for completion.
