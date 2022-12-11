@@ -37,7 +37,7 @@ Bootstrap, CSS, HTML, Javascript, Flexbox, GitHub, GitBash, Local storage.
 
 ## Installation
 
-Clone the repo in your terminal using "git clone" and the html link provided in GitHub.
+Clone the repo in your terminal using "git clone" and the html link - https://github.com/Philip-Pione/Group-6-Project.git
 
 ## Usage
 
