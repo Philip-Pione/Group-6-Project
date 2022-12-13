@@ -1,7 +1,12 @@
+//Creates an instance of the class.
+
 const taskManager = new TaskManager();
 taskManager.load();
 taskManager.render();
 
+
+
+//This portion controls the input received from the user and runs validation testing on the input.
 
 const validFormFieldInput = (data) => {
     data.preventDefault();
@@ -42,6 +47,7 @@ const validFormFieldInput = (data) => {
 
 }
 
+//This function fixes the issue of the incorrect date because of GMT standard and correctly schedules the due date.
 
 const dateValidation = () => {
     const date = new Date();
@@ -59,6 +65,7 @@ const dateValidation = () => {
     return (tDate);
 }
 
+// These event listeners are responsible for the buttons and their functions.
 
 const runButton = document.querySelector('#taskFormEntry');
 runButton.addEventListener('submit', validFormFieldInput);
