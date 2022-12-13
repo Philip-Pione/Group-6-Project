@@ -1,3 +1,7 @@
+
+
+//This will populate the empty html element into the index.html file for each card.
+
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
   const html = `<li class="list-group-item" data-task-id=${id}>
     <div class="card">
@@ -18,7 +22,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
 
 
 
-
+//This class is the main createor for all of the actions that can be accomplished.
   
 class TaskManager {
   constructor(tasks, currentId = 0) {
@@ -26,6 +30,8 @@ class TaskManager {
     this.currentId = currentId;
   }
 
+ //This adds an additional task to the array. 
+  
   addTask(taskName, taskDescription, taskAssignedTo, taskDueDate, taskStatus) {
     const task = {
       id: ++this.currentId,
@@ -38,6 +44,9 @@ class TaskManager {
     this.tasks.push(task);
   }
 
+  
+  //This runs the method that will display the new card to the browser.
+  
   render() {
     const taskHtmlList = [];
 
@@ -52,6 +61,9 @@ class TaskManager {
     document.querySelector('#taskList').innerHTML = tasksHtml;
   }
 
+  
+  //This checks each id# in the array until it matches the test case and returns the id# of the match. 
+  
   getTaskById(taskId) {
     let foundTask;
     for (let i = 0; i < taskManager.tasks.length; i++) {
@@ -63,6 +75,8 @@ class TaskManager {
     return foundTask;
   }
 
+  
+   //This method activates local storage so your tasks persist across losing focus and/or closing the browser window.
   save() {
     const tasksJson = JSON.stringify(this.tasks);
     localStorage.setItem('tasks', tasksJson);
@@ -70,6 +84,7 @@ class TaskManager {
     localStorage.setItem('currentId', currentId);
   }
 
+  //This is used in conjunction with save() to to load items from local storage. 
   load() {
     if (localStorage.getItem('tasks')) {
       const tasksJson = JSON.parse(localStorage.getItem('tasks'));
@@ -78,7 +93,9 @@ class TaskManager {
       this.currentId = parseInt(currentId);
     }
   }
-
+  
+  
+  //This method removes a task from the array by reforming the array without it.
   deleteTask(taskId) {
     const newTasks = [];
     for (let i = 0; i < taskManager.tasks.length; i++) {
@@ -90,11 +107,7 @@ class TaskManager {
     this.tasks = newTasks;
   }
 
-
-  
-  
-  
-
 }
+
 
 module.exports = TaskManager;
