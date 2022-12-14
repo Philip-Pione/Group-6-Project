@@ -19,7 +19,7 @@ An interactive tool that allows users to create a list of tasks that need to be 
 [LIVE] - https://philip-pione.github.io/Group-6-Project/
 
 <br>
-Role: Philip Pione author, William Dika co-author.
+Author: Philip Pione
 <br>
 Tools used: Bootstrap, CSS, HTML, Javascript, Flexbox, GitHub, GitBash, Local storage.
 
