@@ -27,7 +27,8 @@ Tools used: Bootstrap, CSS, HTML, Javascript, Flexbox, GitHub, GitBash, Local st
 
 ## Description
 
-This is a website to allow users to create and update their todo task cards. The user is able to set the status of their task card, and once they are finish their card, they can delete it and remove the card freely from their dashboard
+This allows users to create todo tasks and organize themselves using task cards. The user is able to create new cards, set the status of their task card, and once they finish their card they can delete it and remove the card or archive it as done. It was initially to be done as a group project but unfortunately my group mates did not progress far enough to contribute so I ended up doing it solo.
+
 
 <img width="400" src="https://philip-pione.github.io/Portfolio/assets/images/Thumbnail.JPG">
 
